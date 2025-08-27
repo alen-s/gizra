@@ -1,4 +1,4 @@
-uuid: ebf9d119-88ba-456d-a633-38975ee7d427
+uuid: 329ca161-c0b0-4b86-9e3d-0d27b5207c24
 langcode: en
 status: true
 dependencies:
@@ -6,22 +6,22 @@ dependencies:
     - block_content
     - user
 _core:
-  default_config_hash: 2J0rd5cWfFsdSX-kAb0f9EzvC0_vn4NxGlUpOQAXeOU
+  default_config_hash: HfvTcWhiVuvxchoh4DjIkXhKkj9ow2TGgHkLHSvRLq8
 id: block_content
-label: 'Custom block library'
+label: 'Content blocks'
 module: views
-description: 'Find and manage custom blocks.'
+description: 'Find and manage content blocks.'
 tag: default
 base_table: block_content_field_data
 base_field: id
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: 'Custom block library'
+      title: 'Content blocks'
       fields:
         info:
           id: info
@@ -210,7 +210,7 @@ display:
             custom_date_format: ''
             timezone: ''
             tooltip:
-              date_format: ''
+              date_format: long
               custom_date_format: ''
             time_diff:
               enabled: false
@@ -292,7 +292,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -301,7 +301,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'administer blocks'
+          perm: 'access block library'
       cache:
         type: tag
         options: {  }
@@ -315,7 +315,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'There are no custom blocks available.'
+          content: 'There are no content blocks available.'
           tokenize: false
         block_content_listing_empty:
           id: block_content_listing_empty
@@ -533,14 +533,14 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/block/block-content
+      path: admin/content/block
       menu:
         type: tab
-        title: 'Custom block library'
-        description: ''
+        title: Blocks
+        description: 'Create and edit content blocks.'
         weight: 0
         menu_name: admin
-        parent: block.admin_display
+        parent: system.admin_content
         context: '0'
     cache_metadata:
       max-age: -1

@@ -1,4 +1,4 @@
-uuid: aa60b9b4-69ea-49b5-a033-121504d4360c
+uuid: c3a9d0e6-824c-4260-a780-d2d3807eb836
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   theme:
     - server_theme
 _core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
 id: server_theme_content
 theme: server_theme
 region: content

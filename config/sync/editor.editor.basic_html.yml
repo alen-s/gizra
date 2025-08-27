@@ -1,4 +1,4 @@
-uuid: c5211efb-740d-48d1-933b-1d5c9f5df4ee
+uuid: 7daa0e52-2d8d-423e-919e-075be6684773
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,8 @@ dependencies:
     - filter.format.basic_html
   module:
     - ckeditor5
+_core:
+  default_config_hash: Qi2tIe-L97EutlMmhEvhsNxZOpOoA-RH82c4BQb5n4A
 format: basic_html
 editor: ckeditor5
 settings:
@@ -20,13 +22,12 @@ settings:
       - numberedList
       - '|'
       - blockQuote
-      - drupalMedia
+      - drupalInsertImage
       - '|'
       - heading
+      - code
       - '|'
       - sourceEditing
-      - '|'
-      - code
   plugins:
     ckeditor5_heading:
       enabled_headings:
@@ -35,6 +36,8 @@ settings:
         - heading4
         - heading5
         - heading6
+    ckeditor5_imageResize:
+      allow_resize: true
     ckeditor5_list:
       properties:
         reversed: false
@@ -46,9 +49,6 @@ settings:
         - '<dl>'
         - '<dt>'
         - '<dd>'
-        - '<span>'
-        - '<img src alt data-entity-type data-entity-uuid data-align data-caption width height>'
-        - '<drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode alt title>'
         - '<a hreflang>'
         - '<blockquote cite>'
         - '<ul type>'
@@ -58,9 +58,6 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
-        - '<drupal-media data-align data-caption title>'
-    media_media:
-      allow_view_mode_override: false
 image_upload:
   status: true
   scheme: public

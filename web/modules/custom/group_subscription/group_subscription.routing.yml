@@ -1,0 +1,8 @@
+group_subscription.subscribe:
+  path: '/group/{node}/subscribe'
+  defaults:
+    _controller: '\Drupal\group_subscription\Controller\GroupSubscriptionController::subscribe'
+    _title: 'Subscribe to group'
+  requirements:
+    _permission: 'access content'
+    node: '\d+'

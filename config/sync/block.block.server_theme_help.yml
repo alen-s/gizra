@@ -1,4 +1,4 @@
-uuid: b00bd4c1-556f-4309-aa92-a79a8607d98f
+uuid: 4ddb2961-e64c-4871-b211-39af19a7c200
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - server_theme
 _core:
-  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
 id: server_theme_help
 theme: server_theme
-region: content
-weight: -30
+region: header
+weight: 0
 provider: null
 plugin: help_block
 settings:

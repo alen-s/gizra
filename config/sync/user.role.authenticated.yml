@@ -1,24 +1,30 @@
-uuid: d76f7163-eaf6-4f23-bee8-fc7acfb2f55b
+uuid: 50b38acd-f302-4432-89d4-4e54f608b350
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic_html
-    - filter.format.webform_default
   module:
+    - comment
+    - contact
+    - file
     - filter
-    - media
+    - search
     - shortcut
     - system
 _core:
-  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
 label: 'Authenticated user'
-weight: -9
+weight: 1
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
   - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'delete own files'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
   - 'use text format basic_html'
-  - 'use text format webform_default'
-  - 'view media'

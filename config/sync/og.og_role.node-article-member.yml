@@ -1,0 +1,15 @@
+uuid: 98e40545-2768-4f4c-b73d-f91c698e3bc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node-article-member
+label: Member
+weight: 0
+group_id: null
+group_type: node
+group_bundle: article
+is_admin: false
+permissions: {  }
+role_type: required

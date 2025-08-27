@@ -1,0 +1,6 @@
+name: Group Subscription
+type: module
+description: 'Handles group functionality and subscriptions.'
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:node

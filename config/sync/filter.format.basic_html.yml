@@ -1,14 +1,11 @@
-uuid: d0655264-810f-487e-8e20-cf2a8c9470a0
+uuid: 8887b42f-da40-4017-84fc-7f612e2aa296
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.media.embed
   module:
     - editor
-    - media
 _core:
-  default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
+  default_config_hash: mclCbTlJwWJORez4Y1eX2MqA0aGjSMAoJb3TaBABcK8
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -22,13 +19,13 @@ filters:
   filter_align:
     id: filter_align
     provider: filter
-    status: false
+    status: true
     weight: 7
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
-    status: false
+    status: true
     weight: 8
     settings: {  }
   filter_html:
@@ -37,7 +34,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <img src alt data-entity-type data-entity-uuid data-align data-caption width height> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode alt title> <a hreflang href> <blockquote cite> <ul type> <ol type start> <drupal-media data-align data-caption title data-entity-type data-entity-uuid alt> <strong> <em> <code> <li>'
+      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol start type> <strong> <em> <code> <li> <img src alt data-entity-uuid data-entity-type height width data-caption data-align>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_html_image_secure:
@@ -46,20 +43,9 @@ filters:
     status: true
     weight: 9
     settings: {  }
-  filter_url:
-    id: filter_url
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
     provider: filter
     status: true
-    weight: 0
-    settings:
-      filter_url_length: 72
-  media_embed:
-    id: media_embed
-    provider: media
-    status: true
-    weight: 100
-    settings:
-      default_view_mode: embed
-      allowed_view_modes:
-        embed: embed
-      allowed_media_types: {  }
+    weight: 15
+    settings: {  }

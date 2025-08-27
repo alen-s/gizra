@@ -1,15 +1,15 @@
 _core:
-  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
-uuid: cf19c207-fe02-41f0-8711-348cfb15974b
-name: 'Drupal Starter'
-mail: admin@example.com
+uuid: b459a7aa-0396-4eb8-9385-643010dd5c3f
+name: Gizra
+mail: alensimonyan578@gmail.com
 slogan: ''
 page:
-  403: /403
-  404: /404
-  front: /user/login
+  403: ''
+  404: ''
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
-mail_notification: ''
+mail_notification: null

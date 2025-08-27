@@ -1,4 +1,4 @@
-uuid: 82344b08-98ba-4f8b-8fc6-78dac5e50293
+uuid: 17cc19c1-3741-4290-a91a-282a7f10ea97
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - server_theme
 _core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
 id: server_theme_messages
 theme: server_theme
 region: header
-weight: -4
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:

@@ -1,17 +1,17 @@
-uuid: 0e47a0ba-99cd-40b0-9bc9-c8fecb394b04
+uuid: 038d9347-6289-4374-831a-484887328e0c
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
   theme:
     - server_theme
 _core:
-  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
 id: server_theme_breadcrumbs
 theme: server_theme
 region: header
-weight: -7
+weight: 0
 provider: null
 plugin: system_breadcrumb_block
 settings:

@@ -1,0 +1,15 @@
+uuid: 295f4583-6d06-49b2-8825-ef484ac656b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node-article-administrator
+label: Administrator
+weight: 0
+group_id: null
+group_type: node
+group_bundle: article
+is_admin: true
+permissions: {  }
+role_type: null
