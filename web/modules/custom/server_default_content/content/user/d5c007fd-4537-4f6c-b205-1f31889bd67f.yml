@@ -1,0 +1,68 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: d5c007fd-4537-4f6c-b205-1f31889bd67f
+  default_langcode: en
+default:
+  preferred_langcode:
+    -
+      value: en
+  name:
+    -
+      value: AdminTwo
+  pass:
+    -
+      value: U$S$EYrIiHXNE11U.O5vDAkXhIieC7R.B6XMIzCkjuzAeo033ZkWlvoS
+      existing: ''
+      pre_hashed: false
+  mail:
+    -
+      value: admin_2@example.com
+  timezone:
+    -
+      value: UTC
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1686167785
+  access:
+    -
+      value: 0
+  login:
+    -
+      value: 0
+  roles:
+    -
+      target_id: administrator
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'AdminTwo | Drupal Starter'
+    -
+      tag: meta
+      attributes:
+        name: description
+        content: 'Drupal Starter'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://drupal-starter.ddev.site:4443/user/4'
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  field_last_password_reset:
+    -
+      value: '2024-11-21T22:24:35'
+  field_password_expiration:
+    -
+      value: false
+  field_pending_expire_sent:
+    -
+      value: 0

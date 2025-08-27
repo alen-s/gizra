@@ -1,0 +1,65 @@
+uuid: b4e9d5d2-546a-4b4b-b762-5f6f8cf01bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embed
+  module:
+    - editor
+    - media
+_core:
+  default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
+name: 'Full HTML'
+format: full_html
+weight: 2
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: false
+    weight: 8
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: 9
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <h1> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <blockquote cite> <ul type> <dl> <dt> <dd> <ol type reversed start> <div class> <span class> <strong> <em> <code class="language-*"> <pre> <s> <sub> <sup> <a href> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <img src alt height width> <drupal-media data-entity-type data-entity-uuid alt>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: embed
+      allowed_view_modes:
+        embed: embed
+      allowed_media_types: {  }

@@ -1,0 +1,89 @@
+global-styling:
+  css:
+    theme:
+      dist/css/style.css: {}
+
+global-scripts:
+  js:
+    # General JS
+    dist/js/scripts.js: {}
+    # Header menu
+    dist/js/header-menu.js: {}
+    # Search
+    dist/js/search.js: {}
+    # Toggle hide/show using button.
+    dist/js/toggler.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+    - server_theme/anchor
+
+
+# "View more" button.
+view-more:
+  js:
+    dist/js/view-more.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+roboto:
+  css:
+    base:
+      '//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap':
+        external: true
+        minified: true
+
+opensans:
+  css:
+    base:
+      '//fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap':
+        external: true
+        minified: true
+
+font-awesome:
+  css:
+    theme:
+      /libraries/font-awesome/css/all.min.css: {}
+
+slick:
+  remote: https://github.com/kenwheeler/slick
+  version: 1.8.0
+  license:
+    name: MIT
+    url: https://github.com/kenwheeler/slick/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/slick-carousel/slick/slick.min.js: { minified: true }
+    dist/js/slick-carousel.js: {}
+  css:
+    theme:
+      # Lower weight, as we'd want our custom css to be able to override slick's
+      # default CSS.
+      /libraries/slick-carousel/slick/slick.css: { weight: -10 }
+      /libraries/slick-carousel/slick/slick-theme.css: { weight: -9 }
+  dependencies:
+    - core/jquery
+
+# Add anchors to headings.
+anchor:
+  js:
+    /libraries/anchor-js/anchor.min.js: {}
+  dependencies:
+    - core/drupal
+
+messages:
+  js:
+    dist/js/messages.js: {}
+  dependencies:
+    - core/drupal
+
+expanding-text:
+  js:
+    dist/js/expanding-text.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
