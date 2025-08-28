@@ -1,0 +1,22 @@
+uuid: d1ee96f1-06bc-4909-93b8-51019fa74d0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - tailwind_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: tailwind_theme_help
+theme: tailwind_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
