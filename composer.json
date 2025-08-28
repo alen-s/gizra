@@ -99,6 +99,7 @@
         "phpstan/phpstan-deprecation-rules": "^2.0"
     },
     "require-dev": {
+        "ext-posix": "*",
         "behat/mink": "^1.10",
         "behat/mink-browserkit-driver": "^2.1",
         "behat/mink-selenium2-driver": "^1.6",
@@ -116,10 +117,9 @@
         "phpspec/prophecy-phpunit": "^2",
         "scssphp/scssphp": "^1.0.0",
         "symfony/browser-kit": "^6.3",
-        "symfony/phpunit-bridge": "^5.0",
+        "symfony/phpunit-bridge": "^7.0",
         "totten/lurkerlite": "^1",
-        "weitzman/drupal-test-traits": "^2",
-        "ext-posix": "*"
+        "weitzman/drupal-test-traits": "^2"
     },
     "conflict": {
         "drupal/drupal": "*"
