@@ -1,0 +1,5 @@
+name: Style Guide
+type: module
+description: 'Provides a style guide page with Tailwind Person cards.'
+core_version_requirement: ^9 || ^10
+package: Custom

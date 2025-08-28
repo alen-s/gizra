@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function style_guide_theme($existing, $type, $theme, $path) {
+  return [
+    'style_guide' => [
+      'variables' => [
+        'persons' => NULL,
+      ],
+      'template' => 'components/style-guide',
+      'path' => 'themes/tailwind_theme/templates',
+    ],
+  ];
+}

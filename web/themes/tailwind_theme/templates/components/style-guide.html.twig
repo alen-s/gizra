@@ -1,0 +1,76 @@
+
+{# Single example Person card #}
+<div class="mb-12">
+  <article class="w-[344px] h-[312px] bg-white rounded-t-2xl p-8 flex flex-col items-center gap-10 border-l border">
+    <img src="https://i.pravatar.cc/300?img=1" alt="Person 1" class="w-32 h-32 rounded-full">
+    <div class="w-[280px] h-20 flex flex-col items-center gap-2">
+      <h2 class="w-[280px] h-5 font-inter text-sm font-medium leading-5 text-center">Jane Cooper</h2>
+      <p class="w-[280px] h-5 font-inter text-sm font-normal leading-5 text-center text-gray-600">Paradigm Representative</p>
+      <span class="w-[53px] h-6 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-xl">Admin</span>
+    </div>
+  </article>
+  <div class="w-[344px] h-[53px] bg-white rounded-b-2xl flex items-center border border-t-0">
+    <!-- Left half: button centered in left side -->
+    <div class="w-1/2 flex items-center justify-center">
+      <button class="p-2 hover:bg-gray-100 rounded-full flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.003 5.884L10 9.882L17.997 5.884C17.9674 5.37444 17.7441 4.89549 17.3728 4.54523C17.0016 4.19497 16.5104 3.99991 16 4H4C3.48958 3.99991 2.99845 4.19497 2.62718 4.54523C2.25591 4.89549 2.0326 5.37444 2.003 5.884Z" fill="#BDBDBDFF"/>
+          <path d="M18 8.118L10 12.118L2 8.118V14C2 14.5304 2.21071 15.0391 2.58579 15.4142C2.96086 15.7893 3.46957 16 4 16H16C16.5304 16 17.0391 15.7893 17.4142 15.4142C17.7893 15.0391 18 14.5304 18 14V8.118Z" fill="#BDBDBDFF"/>
+        </svg>
+        Email
+      </button>
+    </div>
+    <div class="w-px h-10 bg-gray-200"></div>
+    <div class="w-1/2 flex items-center justify-center">
+      <button class="p-2 hover:bg-gray-100 flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.00012 3C2.00012 2.44772 2.44784 2 3.00012 2H5.153C5.64183 2 6.05902 2.35341 6.13939 2.8356L6.8787 7.27147C6.95087 7.70451 6.73218 8.13397 6.33952 8.3303L4.79138 9.10437C5.90768 11.8783 8.1218 14.0924 10.8958 15.2087L11.6698 13.6606C11.8661 13.2679 12.2956 13.0492 12.7286 13.1214L17.1645 13.8607C17.6467 13.9411 18.0001 14.3583 18.0001 14.8471V17C18.0001 17.5523 17.5524 18 17.0001 18H15.0001C7.82042 18 2.00012 12.1797 2.00012 5V3Z" fill="#BDBDBDFF"/>
+        </svg>
+        <span class="text-gray-600">Call</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <h1 class="text-3xl font-bold mb-8">Person Card Style Guide</h1>
+  <h2 class="text-2xl font-bold mb-8">Responsive Grid of 10 Person Cards</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+    {% for person in persons %}
+      {# Single example Person card #}
+      <div class="mb-6">
+        <article class="w-full max-w-[344px] h-[312px] bg-white rounded-t-2xl p-8 flex flex-col items-center gap-10 border-l border">
+          <img src="{{ person.image }}" alt="{{ person.name }}" class="w-32 h-32 rounded-full">
+          <div class="w-[280px] h-20 flex flex-col items-center gap-2">
+            <h2 class="w-[280px] h-5 font-inter text-sm font-medium leading-5 text-center">{{ person.name }}</h2>
+            <p class="w-[280px] h-5 font-inter text-sm font-normal leading-5 text-center text-gray-600">{{ person.status }}</p>
+            <span class="flex items-center justify-center w-[70px] h-6 bg-green-100 text-green-800 text-xs px-1 py-1 rounded-xl">{{ person.role }}</span>
+          </div>
+        </article>
+        <div class="w-full max-w-[344px] h-[53px] bg-white rounded-b-2xl flex items-center border border-t-0">
+          <!-- Left half: button centered in left side -->
+          <div class="w-1/2 flex items-center justify-center">
+            <button class="p-2 hover:bg-gray-100 rounded-full flex items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.003 5.884L10 9.882L17.997 5.884C17.9674 5.37444 17.7441 4.89549 17.3728 4.54523C17.0016 4.19497 16.5104 3.99991 16 4H4C3.48958 3.99991 2.99845 4.19497 2.62718 4.54523C2.25591 4.89549 2.0326 5.37444 2.003 5.884Z" fill="#BDBDBDFF"/>
+                <path d="M18 8.118L10 12.118L2 8.118V14C2 14.5304 2.21071 15.0391 2.58579 15.4142C2.96086 15.7893 3.46957 16 4 16H16C16.5304 16 17.0391 15.7893 17.4142 15.4142C17.7893 15.0391 18 14.5304 18 14V8.118Z" fill="#BDBDBDFF"/>
+              </svg>
+              Email
+            </button>
+          </div>
+          <div class="w-px h-10 bg-gray-200"></div>
+          <div class="w-1/2 flex items-center justify-center">
+            <button class="p-2 hover:bg-gray-100 flex items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.00012 3C2.00012 2.44772 2.44784 2 3.00012 2H5.153C5.64183 2 6.05902 2.35341 6.13939 2.8356L6.8787 7.27147C6.95087 7.70451 6.73218 8.13397 6.33952 8.3303L4.79138 9.10437C5.90768 11.8783 8.1218 14.0924 10.8958 15.2087L11.6698 13.6606C11.8661 13.2679 12.2956 13.0492 12.7286 13.1214L17.1645 13.8607C17.6467 13.9411 18.0001 14.3583 18.0001 14.8471V17C18.0001 17.5523 17.5524 18 17.0001 18H15.0001C7.82042 18 2.00012 12.1797 2.00012 5V3Z" fill="#BDBDBDFF"/>
+              </svg>
+              <span class="text-gray-600">Call</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+name: Tailwind Theme
+type: theme
+base theme: olivero
+description: 'Custom Drupal theme using Tailwind CSS'
+core_version_requirement: ^9 || ^10
+package: Custom
+libraries:
+  - tailwind_theme/global-styling

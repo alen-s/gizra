@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks for Tailwind theme.
+ */
+
+function tailwind_theme_page_attachments_alter(array &$attachments) {
+  // Remove Olivero’s main stylesheet
+  if (isset($attachments['#attached']['library'])) {
+    $attachments['#attached']['library'] = array_filter(
+      $attachments['#attached']['library'],
+      fn($lib) => $lib !== 'olivero/global-styling'
+    );
+  }
+}

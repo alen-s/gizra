@@ -1,0 +1,5 @@
+global-styling:
+  version: 1.0
+  css:
+    theme:
+      assets/dist/css/styles.css: {}
