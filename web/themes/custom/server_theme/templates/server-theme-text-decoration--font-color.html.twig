@@ -6,6 +6,11 @@
   {% set color_class = 'text-gray-700' %}
 {% endif %}
 
-<div class="{{ color_class }}">
+{% set background_color_class = '' %}
+{% if backgroundColor == 'light-green' %}
+  {% set background_color_class = 'bg-green-100 text-green-800 text-xs px-2 py-1 rounded-xl' %}
+{% endif %}
+
+<div class="{% if background_color_class %} {{ background_color_class }} {% endif %} {{ color_class }}">
   {{ element }}
 </div>

@@ -1,7 +1,7 @@
 server_style_guide.style_guide:
   path: '/style-guide'
   defaults:
-    _controller: '\Drupal\server_style_guide\Controller\StyleGuideController::styleGuidePage'
+    _controller: '\Drupal\server_style_guide\Controller\StyleGuideController::styleGuidePageNew'
     _title: 'Style Guide'
   requirements:
     _permission: 'access content'

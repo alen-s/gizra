@@ -359,6 +359,7 @@ function server_theme_theme() {
   $info['server_theme_text_decoration__font_color'] = [
     'variables' => [
       'color' => NULL,
+      'backgroundColor' => NULL,
       'element' => [],
     ],
   ];
@@ -520,13 +521,16 @@ function server_theme_theme() {
 function server_theme_preprocess_page(array &$variables) {
   $language = \Drupal::languageManager()->getCurrentLanguage();
 
-  $language_block_config = [
-    'widget' => LanguageDropdownConstants::LANGDROPDOWN_SIMPLE_SELECT,
-    'hide_only_one' => FALSE,
-    'showall' => TRUE,
-    'width' => 'auto',
-    'display' => LanguageDropdownConstants::LANGDROPDOWN_DISPLAY_NATIVE,
-  ];
+  $language_block_config = [];
+  if (\Drupal::moduleHandler()->moduleExists('lang_dropdown')) {
+    $language_block_config = [
+      'widget' => LanguageDropdownConstants::LANGDROPDOWN_SIMPLE_SELECT,
+      'hide_only_one' => FALSE,
+      'showall' => TRUE,
+      'width' => 'auto',
+      'display' => LanguageDropdownConstants::LANGDROPDOWN_DISPLAY_NATIVE,
+    ];
+  }
 
   $messages = !empty($variables['page']['header']['server_theme_messages']) ? $variables['page']['header']['server_theme_messages'] : NULL;
 
@@ -605,7 +609,7 @@ function server_theme_theme_suggestions_page_title_alter(array &$suggestions, ar
  *   Render array.
  */
 function server_theme_prepare_block(string $bid, array $config): array {
-  return \Drupal::service('block_plugin.view_builder')->view($bid, $config);
+  return \Drupal::service('plugin.manager.block')->createInstance($bid)->build($config);
 }
 
 /**
