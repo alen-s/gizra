@@ -56,13 +56,13 @@ trait PeopleTeasersThemeTrait {
    * @return array
    *   The render array.
    */
-  protected function buildElementPersonTeaser(string $image_url, string $alt, string $name, ?string $subtitle = NULL): array {
+  protected function buildElementPersonTeaser(string $image_url, string $alt, string $name, ?string $subtitle = NULL, $role = NULL): array {
     $elements = [];
     $element = [
       '#theme' => 'image',
       '#uri' => $image_url,
       '#alt' => $alt,
-      '#width' => 100,
+      '#width' => 128,
     ];
 
     $elements[] = $this->wrapRoundedCornersFull($element);
@@ -76,6 +76,10 @@ trait PeopleTeasersThemeTrait {
       $element = $this->wrapTextResponsiveFontSize($subtitle, FontSizeEnum::Sm);
       $element = $this->wrapTextCenter($element);
       $inner_elements[] = $this->wrapTextColor($element, TextColorEnum::Gray);
+    }
+
+    if ($role) {
+      $inner_elements[] = $this->wrapTextColor($role, TextColorEnum::Gray, TextColorEnum::LightGreen);
     }
 
     $elements[] = $this->wrapContainerVerticalSpacingTiny($inner_elements, AlignmentEnum::Center);

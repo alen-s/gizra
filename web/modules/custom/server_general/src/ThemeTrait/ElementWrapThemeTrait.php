@@ -546,7 +546,7 @@ trait ElementWrapThemeTrait {
    * @return array
    *   Render array.
    */
-  protected function wrapTextColor(array|string|TranslatableMarkup $element, TextColorEnum $color): array {
+  protected function wrapTextColor(array|string|TranslatableMarkup $element, TextColorEnum $color, TextColorEnum $backgroundColor = null): array {
     if (is_array($element)) {
       $element = $this->filterEmptyElements($element);
     }
@@ -558,6 +558,7 @@ trait ElementWrapThemeTrait {
     return [
       '#theme' => 'server_theme_text_decoration__font_color',
       '#color' => $color->value,
+      '#backgroundColor' => $backgroundColor?->value,
       '#element' => $element,
     ];
   }

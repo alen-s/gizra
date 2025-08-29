@@ -67,45 +67,26 @@ class StyleGuideController extends ControllerBase {
   use TitleAndLabelsThemeTrait;
   use WebformTrait;
 
+  public function styleGuidePageNew () {
+    $build = [];
 
-  /**
-   * The link generator service.
-   *
-   * @var \Drupal\Core\Utility\LinkGenerator
-   */
-  protected $linkGenerator;
+    $build[] = [
+      '#theme' => 'server_style_guide_wrapper',
+      '#elements' => $this->getAllElementsNew(),
+    ];
 
-  /**
-   * The iFrame URL helper service, used for embedding videos.
-   *
-   * @var \Drupal\media\IFrameUrlHelper
-   */
-  protected $iFrameUrlHelper;
+    $build['#attached']['library'][] = 'server_style_guide/accordion';
 
-  /**
-   * The renderer.
-   *
-   * @var \Drupal\Core\Render\RendererInterface
-   */
-  protected $renderer;
+    return $build;
+  }
 
-  /**
-   * The entity type manager.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected $entityTypeManager;
+  protected function getAllElementsNew() : array {
+    $build = [];
 
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    $instance = parent::create($container);
-    $instance->linkGenerator = $container->get('link_generator');
-    $instance->iFrameUrlHelper = $container->get('media.oembed.iframe_url_helper');
-    $instance->renderer = $container->get('renderer');
-    $instance->entityTypeManager = $container->get('entity_type.manager');
-    return $instance;
+    $element = $this->getPeopleTeasers();
+    $build[] = $this->wrapElementNoContainer($element, 'Element: People teasers');
+
+    return $build;
   }
 
   /**
@@ -277,15 +258,42 @@ class StyleGuideController extends ControllerBase {
       'Smith Allen',
       'David Bowie',
       'Rick Morty',
+      'Maria Smith',
+      'John Johnson',
+      'Sarah Williams',
+      'Michael Brown',
+      'Emily Davis',
+      'James Wilson',
     ];
+
+    $subtitles = [
+      'Chief Executive Officer',
+      'General Director',
+      'Chief Technology Officer',
+      'Senior Developer',
+      'Project Manager',
+      'Lead Designer',
+      'Marketing Director',
+      'Product Owner',
+    ];
+
+    $roles = [
+      'Leadership',
+      'Engineering',
+      'Design',
+      'Marketing',
+      'Product',
+      'Operations',
+    ];
+
     foreach ($names as $key => $name) {
       $items[] = $this->buildElementPersonTeaser(
-        $this->getPlaceholderPersonImage(100),
+        $this->getPlaceholderPersonImage(128),
         'The image alt ' . $name,
         $name,
-        $key === 1 ? 'General Director, and Assistant to The Regional Manager' : NULL,
+        $subtitles[array_rand($subtitles)],
+        $roles[array_rand($roles)],
       );
-
     }
 
     return $this->buildElementPeopleTeasers(
